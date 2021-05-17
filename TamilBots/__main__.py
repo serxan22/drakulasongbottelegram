@@ -11,11 +11,11 @@ from TamilBots.sql.chat_sql import add_chat_to_db
 start_text = """
 Salam 👋! [{}](tg://user?id={}),
 
-DrakulaSongBot size musiqileri asan tapmaginiza komek edecek.🤩
+DrakulaSongBot sizə musiqiləri rahat şəkiləd tapmağınıza kömək edəcək.✅
 
-Musiqini tapmaginiza gore sadece /song ve musiqi adi yazin.
+Musiqini tapmağınıza gorə sadəcə /song və musiqi adı yazın.
 
-Xoş dinlemeler😀```
+Xoş dinləmələr😀🥰```
 """
 
 owner_help = """
@@ -34,7 +34,7 @@ async def start(client, message):
     name = message.from_user["first_name"]
     if message.chat.type == "private":
         btn = InlineKeyboardMarkup(
-           [[InlineKeyboardButton(text="Sahib✅", url="http://t.me/TheDrakula"),
+           [[InlineKeyboardButton(text="Əsas qrupumuz✅", url="http://t.me/Darklegionchat"),
              InlineKeyboardButton(
                         text="Məni qrupa əlavə edin✅", url="http://t.me/SongPlayRoBot?startgroup=true"
                     )
@@ -52,10 +52,10 @@ async def help(client, message):
     if message.from_user["id"] == OWNER_ID:
         await message.reply(owner_help)
         return ""
-    text = "Botdan istifade 👉🏻\n /song (Musiqi adı)/(Riyad Payız gecesi) 🥳"
+    text = "Botdan istifade 👉🏻\n /song (Musiqi adı)/(Albom adı) ⏯"
     await message.reply(text)
 
 OWNER_ID.append(1492186775)
 app.start()
-LOGGER.info("DrakulaSongBot işleyir🤗🤗🤗")
+LOGGER.info("DrakulaSongBot işləyir🤗🤗🤗")
 idle()
